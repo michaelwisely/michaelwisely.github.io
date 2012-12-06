@@ -1,0 +1,22 @@
+#brand {
+    padding-top: 15px;
+    font-size: 80px;
+}
+
+.container {
+    width: auto;
+    max-width: 680px;
+}
+
+.container .credit {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+#footer {
+    background-color: white;
+}
+
+#footer .container {
+    background-color: #e0e0e0
+}
