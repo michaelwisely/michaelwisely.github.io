@@ -1,8 +1,6 @@
 permalink: /:categories/:title/
 
 safe: true
-auto: true
 lsi: false
-pygments: true
 
 production_url : http://michaelwisely.github.com
