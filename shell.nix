@@ -27,4 +27,10 @@ pkgs.mkShell {
     pkgs.curl # `task nix:pin`
     pkgs.jq # `task nix:pin`
   ];
+
+  # nix-shell sets this to 1980 for reproducible builds, and Sphinx then
+  # stamps "Copyright © 1980" in the footer. Use the real date instead.
+  shellHook = ''
+    unset SOURCE_DATE_EPOCH
+  '';
 }
