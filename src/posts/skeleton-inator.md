@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description: How the skeleton on my garage door works, in plain English. It all runs on one laptop, and no video is saved or sent anywhere.
+    description: How my Halloween skeleton projector works, in plain English. It all runs on one laptop, and no video is saved or sent anywhere.
 ---
 
 # The Skeleton-inator
@@ -30,15 +30,17 @@ _Ahem._
 
 Behold, the **SKELETON-INATOR!** With it, I will turn every trick-or-treater in the entire Tri-State Area into a _skeleton_! Mwahahaha!
 
-... Temporarily. On my garage door. And then you get candy. 🍬
+... Temporarily. On my garage door. And then you get candy.
 
 ## What is this thing?
 
-If you scanned the QR code out front, you probably just met your skeleton.
-
-A camera watches the sidewalk, a laptop figures out how your body is posed, and a projector draws a matching skeleton on the garage door. Raise your arm, and your skeleton raises its arm.
+The skeleton-inator is a Halloween decoration. A camera watches the sidewalk, a laptop figures out how your body is posed, and a projector draws a matching skeleton on the garage door. Raise your arm, and your skeleton raises its arm.
 
 It's flipped like a mirror, so it moves the way you do. Bring friends. Everybody gets their own skeleton.
+
+Well, that was the plan. I misplaced the power supply for my projector 😭, so it didn't make it out this year.
+
+That said, I think it was still a fun project, so I wanted to do the write-up anyway.
 
 ## Why I built it
 
@@ -247,6 +249,7 @@ For this blog: [Sphinx](https://www.sphinx-doc.org/) with [MyST Markdown](https:
 
 ## Things that went wrong
 
+- The big one: I misplaced the projector's power supply, so the skeleton-inator sat out Halloween this year.
 - The fancy AI accelerator lost to the plain old laptop. Measure, don't guess. (Details in the benchmarks section above.)
 - The old laptop got _hot_. Like, 85–90 °C hot, and at one point it throttled itself way down. The newer laptop doesn't break a sweat.
 - The camera was secretly running in low-res mode, and I didn't notice until I measured it.
@@ -261,7 +264,9 @@ For this blog: [Sphinx](https://www.sphinx-doc.org/) with [MyST Markdown](https:
 
 ## What's next?
 
-Maybe next year: move it to a Raspberry Pi 5 with the Coral, and make some fancier bone artwork.
+Maybe next year I'll try again (and look for my projector bits ahead of time...) and add more to it.
+
+Moving it to a Raspberry Pi 5 with the Coral and making some fancier bone artwork are both on the list.
 
 ## Quick questions
 
@@ -275,7 +280,7 @@ How many people can it handle at once?
 : In testing, it kept up just fine with about five people in view.
 
 What about big costumes?
-: Most costumes should be fine. Really puffy ones might confuse it (inflatable dinosaurs, I'm looking at you 🦖). I haven't tested one yet, so if you've got one, please walk by... for science.
+: Most costumes should be fine. Really puffy ones might confuse it (inflatable dinosaurs, I'm looking at you 🦖). I haven't tested one yet, so if you've got one next year, please walk by... for science.
 
 ## Credits
 
