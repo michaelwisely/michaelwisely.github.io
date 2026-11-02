@@ -1,0 +1,59 @@
+# Run these inside `nix-shell`. `task --list` shows everything.
+version: "3"
+
+vars:
+  SRC: src
+  OUT: _build/html
+  SITE_URL: https://michaelwisely.github.io
+  POST_URL: "{{.SITE_URL}}/posts/skeleton-inator/"
+
+tasks:
+  default:
+    cmds:
+      - task --list
+    silent: true
+
+  build:
+    desc: Build the site into _build/html (warnings fail the build)
+    cmds:
+      - sphinx-build -b dirhtml -W --keep-going {{.SRC}} {{.OUT}}
+
+  preview:
+    desc: Serve the site at http://127.0.0.1:8000 and rebuild on every save
+    vars:
+      PORT: '{{.PORT | default "8000"}}'
+    cmds:
+      - sphinx-autobuild -b dirhtml {{.SRC}} {{.OUT}} --port {{.PORT}}
+
+  linkcheck:
+    desc: Check that every external link in the posts still works
+    cmds:
+      - sphinx-build -b linkcheck -q {{.SRC}} _build/linkcheck
+
+  qr:
+    desc: Make a printable QR code for the skeleton-inator post (override with URL=...)
+    vars:
+      URL: '{{.URL | default .POST_URL}}'
+    cmds:
+      - mkdir -p _build/qr
+      # Error correction "Q" survives a bit of dirt, rain, or a sticky candy hand.
+      - qrencode -l Q -m 4 -t SVG -o _build/qr/skeleton-inator.svg '{{.URL}}'
+      - qrencode -l Q -m 4 -s 20 -t PNG -o _build/qr/skeleton-inator.png '{{.URL}}'
+      - echo "QR code for {{.URL}} written to _build/qr/"
+
+  clean:
+    desc: Delete build output
+    cmds:
+      - rm -rf _build
+
+  nix:pin:
+    desc: Bump nixpkgs in nix/pin.json to the newest commit on its branch
+    cmds:
+      - |
+        set -eu
+        branch=$(jq -r .branch nix/pin.json)
+        rev=$(curl -fsSL "https://api.github.com/repos/NixOS/nixpkgs/branches/$branch" | jq -r .commit.sha)
+        sha=$(nix-prefetch-url --unpack "https://github.com/NixOS/nixpkgs/archive/$rev.tar.gz")
+        jq --arg rev "$rev" --arg sha "$sha" '.rev = $rev | .sha256 = $sha' nix/pin.json > nix/pin.json.tmp
+        mv nix/pin.json.tmp nix/pin.json
+        echo "Pinned $branch at $rev"

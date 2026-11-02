@@ -1,6 +1,0 @@
-permalink: /:categories/:title/
-
-safe: true
-lsi: false
-
-production_url : http://michaelwisely.github.com

@@ -1,0 +1,34 @@
+/* Byline under post titles. */
+.post-date {
+  color: var(--color-foreground-muted);
+  margin-top: -0.75rem;
+}
+
+/* Keep the diagram readable on phones without letting it get huge on desktops. */
+.diagram img {
+  width: 100%;
+  max-width: 960px;
+}
+
+/* A little breathing room between the "for the nerds" dropdowns. */
+.sd-dropdown {
+  margin-bottom: 0.75rem;
+}
+
+/* The privacy box is the most important part of the post, so don't let the
+   theme shrink it. The title already has a 🔒, so drop the theme's icon. */
+.admonition.privacy {
+  font-size: 1rem;
+}
+.admonition.privacy > .admonition-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding-left: 0.75rem;
+}
+.admonition.privacy > .admonition-title::before {
+  content: none;
+}
+
+.diagram {
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-labelledby="t d"
+     font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<title id="t">How the skeleton-inator works</title>
+<desc id="d">Three panels. First, the camera view, with dashed boxes drawn around a waving adult and a child. Second, a close-up of the adult with 17 dots marking the nose, eyes, ears, shoulders, elbows, wrists, hips, knees and ankles. Third, a glowing skeleton on a dark garage door, waving back like a mirror image.</desc>
+<defs>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+    <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.55  0 0 0 0 1  0 0 0 0 0.75  0 0 0 1.6 0" result="green"/>
+    <feMerge><feMergeNode in="green"/><feMergeNode in="green"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="960" height="380" fill="#0b0b12" rx="14"/>
+<rect x="15" y="20" width="290" height="300" fill="#1e2233" rx="10"/>
+<text x="160.0" y="350" text-anchor="middle" font-size="20" font-weight="700" fill="#f8fafc">1. Find the people</text>
+<text x="160.0" y="372" text-anchor="middle" font-size="14" fill="#94a3b8">camera view</text>
+<rect x="330" y="20" width="300" height="300" fill="#1e2233" rx="10"/>
+<text x="480.0" y="350" text-anchor="middle" font-size="20" font-weight="700" fill="#f8fafc">2. Find the joints</text>
+<text x="480.0" y="372" text-anchor="middle" font-size="14" fill="#94a3b8">close-up of one person</text>
+<rect x="655" y="20" width="290" height="300" fill="#111116" rx="10"/>
+<text x="800.0" y="350" text-anchor="middle" font-size="20" font-weight="700" fill="#f8fafc">3. Draw the skeleton</text>
+<text x="800.0" y="372" text-anchor="middle" font-size="14" fill="#94a3b8">on the garage door</text>
+<g stroke="#8a93ad" fill="#8a93ad" stroke-linecap="round" stroke-linejoin="round" opacity="1.0">
+<line x1="110.0" y1="179.4" x2="110.0" y2="238.6" stroke-width="34.0"/>
+<line x1="132.2" y1="179.4" x2="87.8" y2="179.4" stroke-width="13.3"/>
+<polyline points="132.2,179.4 141.1,216.4 145.5,251.2" fill="none" stroke-width="11.1"/>
+<polyline points="122.6,238.6 125.5,270.4 127.0,300.0" fill="none" stroke-width="14.1"/>
+<polyline points="87.8,179.4 64.1,159.4 67.1,122.4" fill="none" stroke-width="11.1"/>
+<polyline points="97.4,238.6 94.5,270.4 93.0,300.0" fill="none" stroke-width="14.1"/>
+<circle cx="110.0" cy="152.0" r="16.3" stroke="none"/>
+</g>
+<g stroke="#8a93ad" fill="#8a93ad" stroke-linecap="round" stroke-linejoin="round" opacity="1.0">
+<line x1="222.0" y1="221.8" x2="222.0" y2="260.2" stroke-width="22.1"/>
+<line x1="236.4" y1="221.8" x2="207.6" y2="221.8" stroke-width="8.6"/>
+<polyline points="236.4,221.8 242.2,245.8 245.0,268.3" fill="none" stroke-width="7.2"/>
+<polyline points="230.2,260.2 232.1,280.8 233.0,300.0" fill="none" stroke-width="9.1"/>
+<polyline points="207.6,221.8 201.8,245.8 199.0,268.3" fill="none" stroke-width="7.2"/>
+<polyline points="213.8,260.2 211.9,280.8 211.0,300.0" fill="none" stroke-width="9.1"/>
+<circle cx="222.0" cy="204.0" r="10.6" stroke="none"/>
+</g>
+<rect x="58" y="108" width="100" height="198" fill="none" stroke="#fb923c" stroke-width="3" stroke-dasharray="9 6" rx="4"/>
+<rect x="58" y="88" width="60" height="20" fill="#fb923c" rx="3"/>
+<text x="64" y="103" font-size="13" font-weight="700" fill="#1c1917">person</text>
+<rect x="190" y="186" width="64" height="120" fill="none" stroke="#fb923c" stroke-width="3" stroke-dasharray="9 6" rx="4"/>
+<rect x="190" y="166" width="60" height="20" fill="#fb923c" rx="3"/>
+<text x="196" y="181" font-size="13" font-weight="700" fill="#1c1917">person</text>
+<g stroke="#8a93ad" fill="#8a93ad" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
+<line x1="480.0" y1="135.0" x2="480.0" y2="215.0" stroke-width="46.0"/>
+<line x1="510.0" y1="135.0" x2="450.0" y2="135.0" stroke-width="18.0"/>
+<polyline points="510.0,135.0 522.0,185.0 528.0,232.0" fill="none" stroke-width="15.0"/>
+<polyline points="497.0,215.0 501.0,258.0 503.0,298.0" fill="none" stroke-width="19.0"/>
+<polyline points="450.0,135.0 418.0,108.0 422.0,58.0" fill="none" stroke-width="15.0"/>
+<polyline points="463.0,215.0 459.0,258.0 457.0,298.0" fill="none" stroke-width="19.0"/>
+<circle cx="480.0" cy="98.0" r="22.0" stroke="none"/>
+</g>
+<g fill="#5eead4" stroke="#0f172a" stroke-width="2">
+<circle cx="480.0" cy="100.0" r="5.5"/>
+<circle cx="487.0" cy="93.0" r="5.5"/>
+<circle cx="473.0" cy="93.0" r="5.5"/>
+<circle cx="496.0" cy="99.0" r="5.5"/>
+<circle cx="464.0" cy="99.0" r="5.5"/>
+<circle cx="510.0" cy="135.0" r="5.5"/>
+<circle cx="450.0" cy="135.0" r="5.5"/>
+<circle cx="522.0" cy="185.0" r="5.5"/>
+<circle cx="418.0" cy="108.0" r="5.5"/>
+<circle cx="528.0" cy="232.0" r="5.5"/>
+<circle cx="422.0" cy="58.0" r="5.5"/>
+<circle cx="497.0" cy="215.0" r="5.5"/>
+<circle cx="463.0" cy="215.0" r="5.5"/>
+<circle cx="501.0" cy="258.0" r="5.5"/>
+<circle cx="459.0" cy="258.0" r="5.5"/>
+<circle cx="503.0" cy="298.0" r="5.5"/>
+<circle cx="457.0" cy="298.0" r="5.5"/>
+</g>
+<text x="618" y="44" text-anchor="end" font-size="14" fill="#5eead4">17 keypoints</text>
+<line x1="667" y1="95" x2="933" y2="95" stroke="#26262f" stroke-width="3"/>
+<line x1="667" y1="170" x2="933" y2="170" stroke="#26262f" stroke-width="3"/>
+<line x1="667" y1="245" x2="933" y2="245" stroke="#26262f" stroke-width="3"/>
+<g filter="url(#glow)" stroke="#f4f1de" stroke-width="6" stroke-linecap="round" fill="none">
+<line x1="800.0" y1="135.0" x2="800.0" y2="215.0" />
+<line x1="770.0" y1="135.0" x2="830.0" y2="135.0" />
+<line x1="783.0" y1="215.0" x2="817.0" y2="215.0" />
+<line x1="770.0" y1="135.0" x2="758.0" y2="185.0" />
+<line x1="758.0" y1="185.0" x2="752.0" y2="232.0" />
+<line x1="830.0" y1="135.0" x2="862.0" y2="108.0" />
+<line x1="862.0" y1="108.0" x2="858.0" y2="58.0" />
+<line x1="783.0" y1="215.0" x2="779.0" y2="258.0" />
+<line x1="779.0" y1="258.0" x2="777.0" y2="298.0" />
+<line x1="817.0" y1="215.0" x2="821.0" y2="258.0" />
+<line x1="821.0" y1="258.0" x2="823.0" y2="298.0" />
+<line x1="800.0" y1="135.0" x2="800.0" y2="118.0" />
+<path d="M 776.0 155.4 Q 800.0 143.4 824.0 155.4" stroke-width="4"/>
+<path d="M 779.0 169.8 Q 800.0 157.8 821.0 169.8" stroke-width="4"/>
+<path d="M 782.0 184.2 Q 800.0 172.2 818.0 184.2" stroke-width="4"/>
+<circle cx="800.0" cy="96.0" r="21.0"/>
+</g>
+<circle cx="792.0" cy="94.0" r="5.0" fill="#f4f1de" opacity="0.85"/>
+<circle cx="808.0" cy="94.0" r="5.0" fill="#f4f1de" opacity="0.85"/>
+<line x1="309" y1="170" x2="317" y2="170" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/>
+<path d="M 315 161 L 327 170 L 315 179 Z" fill="#fb923c"/>
+<line x1="634" y1="170" x2="642" y2="170" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/>
+<path d="M 640 161 L 652 170 L 640 179 Z" fill="#fb923c"/>
+</svg>
