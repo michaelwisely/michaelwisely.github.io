@@ -1,6 +1,6 @@
 # michaelwisely.github.io
 
-My blog, built with [Sphinx](https://www.sphinx-doc.org/). First post: the Skeleton-inator 💀
+My blog, built with [Sphinx](https://www.sphinx-doc.org/). First post: the Skeleton-inator.
 
 ## Quick start
 
