@@ -39,7 +39,7 @@ None of it leaves my driveway.
 _Ahem._
 
 Behold, the **SKELETON-INATOR!**
-With it, I will turn every trick-or-treater in the entire Tri-State Area into a _skeleton_!
+With it, I will turn every trick-or-treater in the entire Tri-State Area[^tristate] into a _skeleton_!
 Mwahahaha!
 
 ... Temporarily.
@@ -57,6 +57,8 @@ Bring friends.
 Everybody gets their own skeleton.
 
 Well, that was the plan.
+
+Uh...
 
 I misplaced the power supply for my projector[^psu] 😭, so it didn't make it out this year.
 
@@ -99,6 +101,9 @@ About 30 times every second, the skeleton-inator...
    This part is regular code, not AI.
 5. draws glowing bones between the dots and sends the picture to a projector aimed at the garage door.
 
+That's it!
+Well, that's the short version.
+
 ```{figure} img/how-it-works.svg
 :class: diagram
 :alt: Three panels. First, the camera view, with dashed boxes around a waving adult and a child. Second, a close-up of the adult with 17 dots on the nose, eyes, ears, shoulders, elbows, wrists, hips, knees and ankles. Third, a glowing skeleton on a dark garage door, waving back like a mirror image.
@@ -108,7 +113,7 @@ Find the people, find the joints, draw the skeleton. Repeat 30 times a second.
 
 ### Wait, what's a "model"?
 
-A model is basically a file full of numbers.
+A model is basically a file full of numbers[^numbers].
 It was trained on lots and lots of example pictures until it got good at one specific job.
 
 The two models in the skeleton-inator were made by Google and shared for anyone to use.
@@ -183,14 +188,13 @@ That's the tracker's job.
 - If someone is briefly hidden (say, behind a friend), their skeleton coasts for up to half a second.
   They can be picked up again as the same person for up to 2 seconds.
 - Things that never move don't get skeletons.
-  If the detector briefly mistakes a bush for a person, it doesn't matter, because the bush never walks anywhere.
+  If the detector briefly mistakes a bush for a person, it doesn't matter, because the bush never walks anywhere[^bush].
 :::
 
 :::{dropdown} Smoothing out the jitters
 
 Even when you stand perfectly still, the keypoints wiggle by a few pixels from frame to frame.
-Drawn as-is, the skeleton would shiver.
-(Fair enough. It has no skin.)
+Drawn as-is, the skeleton would shiver[^cold].
 
 The fix is a [One Euro filter](https://gery.casiez.net/1euro/).
 It's a pretty clever filter that smooths a _lot_ when things move slowly and smooths _less_ when things move fast.
@@ -360,7 +364,7 @@ It's also built in a Nix shell.
   (Details in the benchmarks section above.)
 - The old laptop got _hot_.
   Like, 85–90 °C hot.
-  It did not care for it, and at one point it throttled itself way down.
+  It did not care for it, and at one point it throttled itself way down[^guy].
 - The camera was secretly running in low-res mode, and I didn't notice until I measured it.
 - Skeletons were doing the wrong walk.
   The backup walking animation kept kicking in whenever someone was briefly hidden behind somebody else.
@@ -398,6 +402,11 @@ Does it work for kids?
 How many people can it handle at once?
 : In testing, it kept up just fine with about five people in view.
 
+Does my dog get a skeleton?
+: Probably not.
+  The person finder only cares about people.
+  Your dog will have to go as a ghost.
+
 What about big costumes?
 : Most costumes should be fine.
   Really puffy ones might confuse it (inflatable dinosaurs, I'm looking at you 🦖).
@@ -410,8 +419,22 @@ The name comes from Dr. Heinz Doofenshmirtz, of course.
 
 Happy Halloween!
 
+[^tristate]: Which three states?
+    Don't worry about it.
+
 [^psu]: It's in a box somewhere.
     I'm sure of it.
     Mostly.
 
+[^numbers]: Yeah, yeah, it's more complicated than that.
+    Don't worry about it for now.
+
 [^drawer]: A different drawer than the projector power supply, hopefully.
+
+[^bush]: Not yet, anyway.
+    It's a spooky time of year.
+
+[^cold]: Fair enough.
+    It has no skin.
+
+[^guy]: Come on, guy.
